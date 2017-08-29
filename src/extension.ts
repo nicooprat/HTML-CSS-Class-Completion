@@ -117,6 +117,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     const php = provideCompletionItemsGenerator('php', htmlRegex);
     const vue = provideCompletionItemsGenerator('vue', htmlRegex);
     const twig = provideCompletionItemsGenerator('twig', htmlRegex);
+    const blade = provideCompletionItemsGenerator('blade', htmlRegex);
     const md = provideCompletionItemsGenerator('markdown', htmlRegex);
     const tsReact = provideCompletionItemsGenerator('typescriptreact', jsxRegex);
     const js = provideCompletionItemsGenerator('javascript', jsxRegex)
@@ -129,6 +130,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
     context.subscriptions.push(php);
     context.subscriptions.push(vue);
     context.subscriptions.push(twig);
+    context.subscriptions.push(blade);
     context.subscriptions.push(md);
     context.subscriptions.push(tsReact);
     context.subscriptions.push(js);
